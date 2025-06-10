@@ -126,6 +126,7 @@ public class Main {
                                             terceraNotaMomentoDos[numeroEstudiante - 1] = sc.nextDouble();
                                             break;
                                     }
+                                    break;
 
                                 case 3:
                                     System.out.println("Ingrese el numero de la nota a modificar\n1. Nota uno\n2. Nota dos\n3. Nota tres");
@@ -144,9 +145,11 @@ public class Main {
                                             terceraNotaMomentoTres[numeroEstudiante - 1] = sc.nextDouble();
                                             break;
                                     }
+                                    break;
                             }
+                        break;
 
-//                            Ver estudiantes y las notas de estos
+//                            ******** Ver estudiantes y las notas de estos ********
 
                         case 2:
                             System.out.println("Listado de estudiantes y sus notas");
@@ -154,11 +157,17 @@ public class Main {
                                 notaFinalMomentoUno[i] = (primeraNotaMomentoUno[i] * 0.30) + (segundaNotaMomentoUno[i] * 0.35) + (terceraNotaMomentoUno[i] * 0.35);
                                 notaFinalMomentoDos[i] = (primeraNotaMomentoDos[i] * 0.30) + (segundaNotaMomentoDos[i] * 0.35) + (terceraNotaMomentoDos[i] * 0.35);
                                 notaFinalMomentoTres[i] = (primeraNotaMomentoTres[i] * 0.30) + (segundaNotaMomentoTres[i] * 0.35) + (terceraNotaMomentoTres[i] * 0.35);
+                                notaFinal[i] = (notaFinalMomentoUno[i]*0.3)+(notaMomentoDos[i]*0.35)+(notaFinalMomentoTres[i]*0.35);
                                 System.out.println("El/La estudiante " + "#" + (i + 1) + " es " + estudiantes[i] + "\nSus notas son las siguientes:\n******Momento 1******\nNota #1: " + primeraNotaMomentoUno[i] + "\nNota #2: " + segundaNotaMomentoUno[i] + "\nNota #3: " + terceraNotaMomentoUno[i] + "\nNota final del momento 1: " + notaFinalMomentoUno[i] + "\n******Momento 2******\nNota #1: " + primeraNotaMomentoDos[i] + "\nNota #2: " + segundaNotaMomentoDos[i] + "\nNota #3: " + terceraNotaMomentoDos[i] + "\nNota final del momento 2: " + notaFinalMomentoDos[i] + "\n******Momento 3******\nNota #1: " + primeraNotaMomentoTres[i] + "\nNota #2: " + segundaNotaMomentoTres[i] + "\nNota #3: " + terceraNotaMomentoTres[i] + "\nNota final del momento 2: " + notaFinalMomentoTres[i]);
+                                if(notaFinal[i]>=3.0){
+                                    System.out.println("Su nota final es: "+notaFinal[i]+"\n¡Felicidades, ganaste!");
+                                }else {
+                                    System.out.println("Su nota final es: "+notaFinal[i]+"\nPerdiste, suerte para la proxima");
+                                }
                             }
                             break;
 
-//                            cerrar programa
+//                           ******** cerrar programa ********
 
 
                         case 3:
